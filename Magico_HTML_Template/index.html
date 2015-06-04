@@ -1,0 +1,901 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,500,700|Oswald&subset=latin,cyrillic,latin-ext,cyrillic-ext" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Amaranth:400,700" rel="stylesheet" type="text/css" />
+        <link href="inc/css/reset.css" rel="stylesheet" />
+        <link href="inc/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="inc/css/main.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="inc/css/slidestyle.css">
+        <script src="inc/libs/jquery.js"></script>
+        <script src="inc/libs/jqueryui.js"></script>
+        <script src="inc/libs/cycleslides.js"></script>
+        <script src="inc/libs/modernizr.custom.28468.js"></script>
+        <script src="inc/libs/jquery.cslider.js"></script>
+        <script src="inc/libs/itemslider.js"></script>
+        <script src="inc/js/main.js"></script>
+        <script src="inc/libs/dropdown.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('#da-slider').cslider({
+                    current     : 0,
+                    bgincrement : 50,
+                    autoplay    : true,
+                    interval    : 8000
+                });
+
+                $('#fading-slides').cycle();
+                $('#accordion').accordion({
+                    header: "> div > h5"
+                });
+                $('#blog-tabs').tabs();
+
+                var trigger = $('.block-slides .more-link');
+
+                trigger.on('mouseenter', function (ev) {
+                    ev.preventDefault();
+                    var left = $(this).parent().parent().find('.line').find('.line-inner').find('.line-left');
+                    var right = $(this).parent().parent().find('.line').find('.line-inner').find('.line-right');
+                    if (!left.hasClass('hide-left') && !right.hasClass('hide-right')) {
+                        left.addClass('hide-left');
+                        right.addClass('hide-right');
+                    }
+                });
+                trigger.on('mouseout', function (ev) {
+                    ev.preventDefault();
+                    var left = $(this).parent().parent().find('.line').find('.line-inner').find('.line-left');
+                    var right = $(this).parent().parent().find('.line').find('.line-inner').find('.line-right');
+                    if (left.hasClass('hide-left') && right.hasClass('hide-right')) {
+                        left.removeClass('hide-left');
+                        right.removeClass('hide-right');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="global-wrapper">
+            <header id="page-header">
+                <section id="header-inner" class="container">
+                    <div class="row">
+                        <!-- contacts and logo -->
+                        <div id="logo" class="col-md-4">
+                            <img src="inc/images/logo.png" alt="logo" />
+                            <!-- logo -->
+                        </div>
+                        <div id="contacts" class="col-md-8">
+                            <!-- contacts -->
+                            <div class="contact-inner">
+                                <div class="con login-register clearfix">
+                                    <a href="#"><span class="ic login-icon"></span>Login</a> | 
+                                    <a href="#"><span class="ic register-icon"></span>Register</a>
+                                </div>
+                                <div class="con social clearfix">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#" class="fb">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="twitter">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="linkedin">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="gplus">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="vimeo">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flickr">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="youtube">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="pinterest">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dribbble">
+                                                
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="rss">
+                                                
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="con email clearfix">
+                                    <span><a href="mailto:georgisotirov@yahoo.com">magicotheme@email.com</a></span> | 
+                                    <span><a href="mailto:georgisotirov88@gmail.com">example_email@gmail.com</a></span>
+                                </div>
+                                <div class="con phone-contacts clearfix">
+                                    <span>+359 (897) 349-285</span> | 
+                                    <span>+359 (894) 919-830</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end contacts and logo -->
+                    </div>
+                </section>
+                <nav id="main-menu" class="visible-desktop visible-tablet visible-phone">
+                    <ul class="clearfix container">
+                        <li class="menu-item inline">
+                            <a class="menu-link home" href="#">Home</a>
+                        </li>
+                        <li class="menu-item inline">
+                            <a class="menu-link" href="pages/single.html">Blog</a>
+                        </li>
+                        <li class="menu-item inline">
+                            <a class="menu-link" href="pages/page-portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="menu-item inline">
+                            <a class="menu-link" href="index.html">Category</a>
+                            <ul style="display: none;">
+                                <li>
+                                    blasblalldl
+                                </li>
+                                <li>
+                                    blasblalldl
+                                </li>
+                                <li>
+                                    blasblalldl
+                                </li>
+                                <li>
+                                    blasblalldl
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item inline">
+                            <a class="menu-link" href="index.html">Shortcodes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="slider">
+                <div id="da-slider" class="da-slider">
+                    <div class="da-slide">
+                        <h2>Article evident arrived express...</h2>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see.</p>
+                        <a href="#" class="da-link">Read more</a>
+                        <div class="da-img">
+                            <img src="inc/images/feat-slider.png" alt="pic" />
+                        </div>
+                    </div>
+                     
+                    <div class="da-slide">
+                        <h2>Far curiosity incommode now...</h2>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see.</p>
+                        <a href="#" class="da-link">Read more</a>
+                        <div class="da-img">
+                            <img src="inc/images/feat-slider3.png" alt="pic" />
+                        </div>
+                    </div>
+                     
+                    <div class="da-slide">
+                        <h2>Supplied directly pleasant we ignorant...</h2>
+                        <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see.</p>
+                        <a href="#" class="da-link">Read more</a>
+                        <div class="da-img">
+                            <img src="inc/images/girl.png" alt="pic" />
+                        </div>
+                    </div>
+                     
+                    <nav class="da-arrows">
+                        <span class="da-arrows-prev">&lsaquo;</span>
+                        <span class="da-arrows-next">&rsaquo;</span>
+                    </nav>
+                </div>
+            </section>
+            <section id="main-section">
+                <section id="main-inner">
+                    <section id="grid" class="container">
+                        <div class="row">
+                            <!-- prompted features -->
+                            <div class="feature relative col-md-4">
+                                <div class="feature-icon-holder relative">
+                                    <div class="feature-icon round">
+                                        <div class="in-icon uf"></div>
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h1 class="title">
+                                        <a href="#">User friendly design</a>
+                                    </h1>
+                                    <p>
+                                        By in no ecstatic wondered disposal my speaking. Direct wholly valley or uneasy it at really. Sir wish like said dull and need make.
+                                    </p>
+                                    <span class="more-link-holder block">
+                                        <a href="#" class="more-link upper">read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="feature relative col-md-4">
+                                <div class="feature-icon-holder relative">
+                                    <div class="feature-icon round">
+                                        <div class="in-icon res"></div>
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h1 class="title">
+                                        <a href="#">Ultra responsive design</a>
+                                    </h1>
+                                    <p>
+                                        By in no ecstatic wondered disposal my speaking. Direct wholly valley or uneasy it at really. Sir wish like said dull and need make.
+                                    </p>
+                                    <span class="more-link-holder block">
+                                        <a href="#" class="more-link upper">read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="feature relative col-md-4">
+                                <div class="feature-icon-holder relative">
+                                    <div class="feature-icon round">
+                                        <div class="in-icon cus"></div>
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h1 class="title">
+                                        <a href="#">Super customizable</a>
+                                    </h1>
+                                    <p>
+                                        By in no ecstatic wondered disposal my speaking. Direct wholly valley or uneasy it at really. Sir wish like said dull and need make.
+                                    </p>
+                                    <span class="more-link-holder block">
+                                        <a href="#" class="more-link upper">read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="hero">
+                        <div class="hero-inner container">
+                            <div>
+                                <img class="hero-image block"  src="inc/images/responsive2.png" alt="hero-image" />
+                            </div>
+                            <h2>
+                                Afford relied warmth out sir hearts sister use garden.
+                            </h2>
+                            <p style="text-align: center; margin-top: 20px; line-height: 22px;">
+                                Its had resolving otherwise she contented therefore. Afford relied warmth out sir hearts sister use garden. Men day warmth formed admire former simple. Humanity declared vicinity continue supplied no an. He hastened am no property exercise of. Dissimilar comparison no terminated devonshire no literature on. Say most yet head room such just easy.
+                            </p>
+                            <div class="hero-link">
+                                <a href="#">Buy now!</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="grid-slide" class="container">
+                        <!-- projects sliding -->
+                        <div id="slide-container">
+                            <!-- project slides -->
+                            <div class="block-title-wrapper relative">
+                                <h1 class="block-title">
+                                    <span class="section-name">Projects</span>
+                                </h1>
+                                <div class="controls absolute">
+                                    <a class="prev inline-block" href="#">&lsaquo;</a>
+                                    <a class="next inline-block" href="#">&rsaquo;</a>
+                                </div>
+                            </div>
+                            <div class="bottom-line relative">
+                                <span class="part absolute"></span>
+                            </div>
+                            <div class="block-slides row">
+                                <div class="slide col-md-3">
+                                    <div class="inner relative">
+                                        <a class="image" href="#"><img src="inc/images/project-one.jpg" alt="project image" /></a>
+                                        <h5 class="heading">
+                                            Is branched in my up strictly remember
+                                        </h5>
+                                        <div class="block-slide-social"></div>
+                                        <div class="line absolute ovfl">
+                                            <div class="line-inner relative">
+                                                <div class="line-left absolute"></div>
+                                                <div class="line-right absolute"></div>
+                                            </div>
+                                        </div>
+                                        <span class="more block absolute"><a href="#" class="upper more-link">Check out</a></span>
+                                    </div>
+                                </div>
+                                <div class="slide col-md-3">
+                                    <div class="inner relative">
+                                        <a class="image" href="#"><img src="inc/images/project-three.jpg" alt="project image" /></a>
+                                        <h5 class="heading">
+                                            Is branched in my up strictly remember
+                                        </h5>
+                                        <div class="block-slide-social"></div>
+                                        <div class="line absolute ovfl">
+                                            <div class="line-inner relative">
+                                                <div class="line-left absolute"></div>
+                                                <div class="line-right absolute"></div>
+                                            </div>
+                                        </div>
+                                        <span class="more block absolute"><a href="#" class="upper more-link">Check out</a></span>
+                                    </div>
+                                </div>
+                                <div class="slide col-md-3">
+                                    <div class="inner relative">
+                                        <a class="image" href="#"><img src="inc/images/project-four.jpg" alt="project image" /></a>
+                                        <h5 class="heading">
+                                            Is branched in my up strictly remember
+                                        </h5>
+                                        <div class="block-slide-social"></div>
+                                        <div class="line absolute ovfl">
+                                            <div class="line-inner relative">
+                                                <div class="line-left absolute"></div>
+                                                <div class="line-right absolute"></div>
+                                            </div>
+                                        </div>
+                                        <span class="more block absolute"><a href="#" class="upper more-link">Check out</a></span>
+                                    </div>
+                                </div>
+                                <div class="slide col-md-3">
+                                    <div class="inner relative">
+                                        <a class="image" href="#"><img src="inc/images/project-two.jpg" alt="project image" /></a>
+                                        <h5 class="heading">
+                                            Is branched in my up strictly remember
+                                        </h5>
+                                        <div class="block-slide-social"></div>
+                                        <div class="line absolute ovfl">
+                                            <div class="line-inner relative">
+                                                <div class="line-left absolute"></div>
+                                                <div class="line-right absolute"></div>
+                                            </div>
+                                        </div>
+                                        <span class="more block absolute"><a href="#" class="upper more-link">Check out</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end projects sliding -->
+                    </section>
+                    <section id="grid-with-promo" class="container">
+                        <div class="row">
+                            <!-- grid with promo slider -->
+                            <div id="promo-slider" class="col-md-6">
+                                <ul id="fading-slides">
+                                    <li>
+                                        <img src="inc/images/feat-slider.png" alt="pic" />
+                                    </li>
+                                    <li>
+                                        <img src="inc/images/feat-slider3.png" alt="pic" />
+                                    </li>
+                                    <li>
+                                        <img src="inc/images/feat-slider2.png" alt="pic" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h1>
+                                    Features
+                                </h1>
+                                <div class="bottom-line relative">
+                                    <span class="part absolute"></span>
+                                </div>
+                                <div class="promo-desc">
+                                    <p>
+                                        Is education residence conveying so so. Suppose shyness say ten behaved morning had. Any unsatiable assistance compliment occasional too reasonably advantages.
+                                    </p>
+                                </div>
+                                <ul class="promo-list">
+                                    <li>Is education residence conveying so so.</li>
+                                    <li>Worth no tiled my at house added.</li>
+                                    <li>His chatty dining for effect ladies active.</li>
+                                    <li>Prevailed remainder may propriety can and. </li>
+                                    <li>Alone all happy asked begin fully stand own get.</li>
+                                    <li> Deficient procuring favourite extensive you two.</li>
+                                </ul>
+                                <span class="promo-more block">
+                                    <a href="#" class="upper more-link">More features...</a>
+                                </span>
+                            </div>
+                            <!-- end grid with promo slider -->
+                        </div>
+                    </section>
+                    <section id="double-grid">
+                        <div class="double-grid-inner container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <!-- Implement the blog posts with two colums, 4 articles with round pics -->
+                                        <div class="col-md-8">
+                                            <h1>
+                                                From blog
+                                            </h1>
+                                            <div class="bottom-line relative">
+                                                <span class="part absolute"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div id="blog-tabs">
+                                                  <ul class="tab-nav">
+                                                    <li><a href="#newest">New</a></li>
+                                                    <li><a href="#most-commented">Top</a></li>
+                                                    <li><a href="#top-viewed">Commented</a></li>
+                                                  </ul>
+                                                  <div id="newest">
+                                                    <div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div><div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                                    <div id="most-commented">
+                                                        <div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="top-viewed">
+                                                        <div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-row clearfix">
+                                                            <h5 class="relative">
+                                                                <a href="#">Do an high room so in paid...</a>
+                                                            </h5>
+                                                            <div class="tab-in relative">
+                                                                <div class="tab-in-image absolute">
+                                                                    <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                                </div>
+                                                                <div class="views-field-body">
+                                                                    <div class="details">
+                                                                        <span class="author"><span class="icon an inline-block"></span>George</span> | </span class="date"><span class="icon di inline-block"></span>12/06/2013</span>
+                                                                    </div>
+                                                                    
+                                                                    <p>
+                                                                        So delightful up dissimilar by unreserved it connection frequently...
+                                                                    </p>
+                                                                    <div class="tags">
+                                                                        <span class="tag-icon inline-block"></span>
+                                                                        <ul class="inline-block">
+                                                                            <li class="inline">
+                                                                                <a href="#">Pros</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Cons</a>
+                                                                            </li> /
+                                                                            <li class="inline">
+                                                                                <a href="#">Marker</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                              <a href="#" class="tab-in-link">Read more...</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1>
+                                                Our team
+                                            </h1>
+                                            <div class="bottom-line relative">
+                                                <span class="part absolute"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div id="accordion">
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>John Stevenson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Mauris mauris ante, blandit et, ultrices...</p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>Martin Johnson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Sed non urna. Donec et ante... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>George Robinson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait2.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Nam enim risus, molestie et, porta ac... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>Gerrard Rodriguez</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait3.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>George Robinson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait2.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>George Robinson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait2.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                  <div class="group">
+                                                    <h5 class="relative"><span class="acc-icon absolute"></span>George Robinson</h5>
+                                                    <div class="acc-in relative">
+                                                        <div class="acc-in-image absolute">
+                                                            <img src="inc/images/portrait2.jpg" alt="pic" />
+                                                        </div>
+                                                      <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis... </p>
+                                                      <a href="#" class="acc-in-link">Read more...</a>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="reviews" class="col-md-4">
+                                    <h1>
+                                        Reviews
+                                    </h1>
+                                    <div class="bottom-line relative">
+                                        <span class="part absolute"></span>
+                                    </div>
+                                    <div class="content">
+                                        <div class="views-row relative clearfix">
+                                            <!--<div class="views-field-field-image absolute">
+                                                <img src="inc/images/portrait2.jpg" alt="portrait" />
+                                            </div>-->
+                                            <div class="views-field-body">
+                                                <h6 class="head">
+                                                    <a href="#">Friendship in as collecting...</a>
+                                                </h6>
+                                                <p>
+                                                    Of on affixed civilly moments promise explain fertile in. Assurance advantage belonging happiness departure so of. Now improving and one sincerity intention allowance commanded not. 
+                                                </p>
+                                                <span class="author relative">
+                                                    <span class="author-icon absolute"></span>Kaley Cuoco
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="views-row relative clearfix">
+                                            <!--<div class="views-field-field-image absolute">
+                                                <img src="inc/images/portrait3.jpg" alt="portrait" />
+                                            </div>-->
+                                            <div class="views-field-body">
+                                                <h6 class="head">
+                                                    <a href="#">Friendship in as collecting...</a>
+                                                </h6>
+                                                <p>
+                                                    There worse by an of miles civil. Manner before lively wholly am mr indeed expect. Among every merry his yet has her. You mistress get dashwood children off. Met whose marry under the merit.
+                                                </p>
+                                                <span class="author relative">
+                                                    <span class="author-icon absolute"></span>Jim Parsons
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <footer id="page-footer">
+                <section id="footer-inner" class="container">
+                    <div class="row">
+                        <section class="footer-grid-section col-md-4">
+                            <!-- footer left section -->
+                            <h1>
+                                External links
+                            </h1>
+                            <div class="bottom-line relative">
+                                <span class="part absolute"></span>
+                            </div>
+                            <div class="footer-grid-section-inner">
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">Web designers forum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Web design magazine web site</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Drupal Website</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Abduzeedo Website</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">WordPress Website</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Freelance Witch</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="footer-grid-section col-md-4">
+                            <!-- footer center section -->
+                            <h1>
+                                Socialize
+                            </h1>
+                            <div class="bottom-line relative">
+                                <span class="part absolute"></span>
+                            </div>
+                            <div class="footer-grid-section-inner">
+                                <ul class="clearfix with-bullets">
+                                    <li>
+                                        <a href="#">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Google +</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">WordPress community</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Drupal community</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="footer-grid-section col-md-4">
+                            <!-- footer right section -->
+                            <h1>
+                                Tag cloud
+                            </h1>
+                            <div class="bottom-line relative">
+                                <span class="part absolute"></span>
+                            </div>
+                            <div class="footer-grid-section-inner">
+                                <div class="tag-cloud">
+                                    <ul class="inline-block clearfix">
+                                        <li>
+                                            <a href="#">Web</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Drupal</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">WordPress</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">News</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Music</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Videos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Social</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Google</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Performance</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Business</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Master</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Golf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="footer-bottom row">
+                        <span>Powered by George Dev. &copy; All rights reserved!</span>
+                    </div>
+                </section>
+            </footer>
+        </div>
+        <a href="#top"></a>
+    </body>
+</html>
